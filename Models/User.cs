@@ -21,7 +21,7 @@ namespace LoginReg.Models
     [Required]
     [DataType(DataType.Password)]
     [RegularExpression(@"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)).+$", ErrorMessage = "Password must contain atleast 1 uppercase, 1 lowercase and 1 number!")]
-    [StringLength(20, MinimumLength = 8, ErrorMessage = "Password should be atleast 8 characters long!")]
+    [StringLength(255, MinimumLength = 8, ErrorMessage = "Password should be atleast 8 characters long!")]
     public string Password {get;set;}
     public DateTime CreatedAt {get;set;} = DateTime.Now;
     public DateTime UpdatedAt {get;set;} = DateTime.Now;
